@@ -11,15 +11,15 @@ let user3 = {
 }
 
 // Acceder a los valores: Notacion de punto
-console.log(user3.name);
+// console.log(user3.name);
 
 // Para agregar propiedades
 user3.lastName = 'Perez';
-console.log(user3.lastName)
+// console.log(user3.lastName)
 
 // Para borrar un propiedad (delete)
 delete user3.lastName;
-console.log(user3.lastName)
+// console.log(user3.lastName)
 
 // Propiedades con mas de una palabra
 let user4 = {
@@ -27,7 +27,7 @@ let user4 = {
     age: 23,
     'is member': true
 }
-console.log(user4['is member'])
+// console.log(user4['is member'])
 
 // Se puede tener una COMA COLGANTE con los objetos
 /*
@@ -42,13 +42,13 @@ let user5 = {
   alert( user5[key] ); // John (si se ingresara "name")
 */
   // PROPIEDADES CALCULAS
-  let fruit = prompt("¿Qué fruta comprar?", "manzana");
-
+  // let fruit = prompt("¿Qué fruta comprar?", "manzana");
+/*
 let bag = {
   [fruit]: 5, // El nombre de la propiedad se obtiene de la variable fruit
 };
-
-alert( bag.manzana );
+*/
+// alert( bag.manzana );
 
 // Atajo para valores de propiedad
 function makeUser(name, age) {
@@ -60,10 +60,51 @@ function makeUser(name, age) {
   }
   
   let user5 = makeUser("John", 30);
-  alert(user5.name); // John
+  // alert(user5.name); // John
 
 // La prueba de propiedad existente, el operador “in”
 let user6 = { name: "John", age: 30 };
 
-alert( "age" in user6 );    // mostrará "true", porque user.age sí existe
-alert( "blabla" in user6 ); // mostrará false, porque user.blabla no existe
+// alert( "age" in user6 );    // mostrará "true", porque user.age sí existe
+// alert( "blabla" in user6 ); // mostrará false, porque user.blabla no existe
+
+// ejercicio 1
+
+const user7 = {};
+user7.value1 = 'one';
+user7.value2 = 'two';
+user7.value3 = 'three';
+user7.value4 = 'four';
+user7.value5 = 'five';
+
+delete user7.value4
+
+console.log(user7)
+
+let propiedad = 'surname'
+
+// for (let key in user7)
+
+const IVA = 1.12;
+
+const item1 = {
+  precio: 15,
+  cantidad: 3,
+  impuesto: IVA
+}
+
+const item2 = {
+  precio: 3,
+  cantidad: 10,
+  impuesto: IVA
+}
+
+let factura = {
+  item1: item1,
+  item2: item2,
+  calcularTotal: ()=>{
+    return item1.precio * item1.cantidad * item1.impuesto + item2.precio * item2.cantidad * item2.impuesto
+  }
+}
+
+console.log(factura.calcularTotal());
