@@ -90,20 +90,28 @@ const IVA = 1.12;
 const item1 = {
   precio: 15,
   cantidad: 3,
-  impuesto: IVA
+  impuesto: IVA,
+  calcularTotal: function (){
+    return this.precio * this.cantidad * this.impuesto
+  }
 }
+
+console.log(item1.calcularTotal());
 
 const item2 = {
   precio: 3,
   cantidad: 10,
-  impuesto: IVA
+  impuesto: IVA,
+  calcularTotal: function (){
+    return this.precio * this.cantidad * this.impuesto
+  }
 }
 
 let factura = {
   item1: item1,
   item2: item2,
   calcularTotal: ()=>{
-    return item1.precio * item1.cantidad * item1.impuesto + item2.precio * item2.cantidad * item2.impuesto
+    return item1.calcularTotal()  + item2.calcularTotal()
   }
 }
 
