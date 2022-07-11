@@ -1,0 +1,3 @@
+<h1>Documento XML</h1>
+<p>XML significa eXtensible Markup Language</p>
+<p>XML ya no se utiliza, en su lugar se usa JSON</p>
