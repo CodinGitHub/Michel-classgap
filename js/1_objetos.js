@@ -1,3 +1,19 @@
+// 1. OBJETOS
+
+let busqueda = 'edad';
+
+let usuario = {
+    edad: 23,
+    nombre: 'David',
+    aprellido: 'Ruiz',
+    'es miembro': true,
+    [domicilio]: 'Calle 15'
+}
+
+let domicilio = prompt('Escribe tu domicilio');
+
+console.log(user['es miembro']);
+
 // Declaración 
 
 // Objetos vacios
